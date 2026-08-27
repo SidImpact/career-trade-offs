@@ -170,7 +170,7 @@ export default function ExplorePage() {
       </div>
 
       <div className="flex flex-col md:flex-row gap-4 mb-8">
-        <div className="relative flex-grow w-full">
+        <div className="relative flex-grow w-full flex items-center">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" />
           <input 
             type="text"
@@ -182,8 +182,20 @@ export default function ExplorePage() {
                 handleGenerate();
               }
             }}
-            className="w-full pl-10 pr-4 py-3 rounded-xl border-2 border-neutral-300 focus:outline-none focus:ring-2 focus:border-transparent focus:ring-neutral-900 transition-shadow"
+            className={`w-full pl-10 py-3 rounded-xl border-2 border-neutral-300 focus:outline-none focus:ring-2 focus:border-transparent focus:ring-neutral-900 transition-shadow ${
+              query.trim() !== '' && sortedCareers.length === 0 ? 'pr-[130px]' : 'pr-4'
+            }`}
           />
+          {query.trim() !== '' && sortedCareers.length === 0 && (
+            <button
+              onClick={handleGenerate}
+              disabled={isGenerating}
+              className="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-neutral-900 text-white text-xs font-semibold rounded-lg hover:bg-neutral-800 transition-colors flex items-center gap-1.5 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isGenerating ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Sparkles className="w-3.5 h-3.5" />}
+              {isGenerating ? "Generating..." : "Generate AI"}
+            </button>
+          )}
         </div>
         <div className="flex flex-row gap-4 w-full md:w-auto shrink-0">
           <select 
