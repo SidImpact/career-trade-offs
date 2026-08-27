@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Compare: Radar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            display: flex; justify-content: center; align-items: center; 
+            height: 100vh; background: #fafafa; margin: 0; 
+        }
+        .container { 
+            width: 100%; max-width: 700px; background: white; 
+            padding: 2rem; border-radius: 1rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+        }
+        h2 { text-align: center; color: #171717; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Compare: Entrepreneur vs Software Engineer</h2>
+        <canvas id="myChart"></canvas>
+    </div>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: [
+                    'Income Instability', 
+                    'Uncertainty', 
+                    'Screen Fatigue', 
+                    'Continuous Learning', 
+                    'Public Interaction', 
+                    'Decision Pressure', 
+                    'Isolation'
+                ],
+                datasets: [{
+                    label: 'Entrepreneur',
+                    data: [5, 5, 3, 4, 5, 5, 3],
+                    fill: true,
+                    backgroundColor: 'rgba(220, 38, 38, 0.2)',
+                    borderColor: 'rgba(220, 38, 38, 1)',
+                    pointBackgroundColor: 'rgba(220, 38, 38, 1)',
+                }, {
+                    label: 'Software Engineer',
+                    data: [1, 2, 5, 5, 1, 3, 4],
+                    fill: true,
+                    backgroundColor: 'rgba(37, 99, 235, 0.2)',
+                    borderColor: 'rgba(37, 99, 235, 1)',
+                    pointBackgroundColor: 'rgba(37, 99, 235, 1)',
+                }]
+            },
+            options: {
+                elements: { line: { borderWidth: 3 } },
+                scales: { 
+                    r: { 
+                        suggestedMin: 0, 
+                        suggestedMax: 5, 
+                        ticks: { stepSize: 1, backdropColor: 'transparent' },
+                        grid: { color: '#e5e5e5' },
+                        angleLines: { color: '#e5e5e5' }
+                    } 
+                },
+                plugins: {
+                    legend: { position: 'bottom', labels: { padding: 20, font: { size: 14, weight: 'bold' } } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

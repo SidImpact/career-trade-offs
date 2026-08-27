@@ -1,0 +1,262 @@
+{
+  "Architect": {
+    "estimate": "5-7 Years",
+    "runway_demand": "Extreme",
+    "gatekeeper": "Completing a rigorous 5-year B.Arch degree and securing an internship/entry-level drafting job.",
+    "milestones": [
+      { "phase": "B.Arch Degree", "duration": "5 years" },
+      { "phase": "Job Hunting & Portfolio Building", "duration": "3-6 months" },
+      { "phase": "First Junior Architect Role", "duration": "Immediate upon hire" }
+    ]
+  },
+  "Nurse": {
+    "estimate": "2-4 Years",
+    "runway_demand": "High",
+    "gatekeeper": "Passing the NCLEX-RN exam after completing a nursing degree.",
+    "milestones": [
+      { "phase": "Nursing School (ADN or BSN)", "duration": "2-4 years" },
+      { "phase": "NCLEX Prep & Licensing", "duration": "1-3 months" },
+      { "phase": "First Clinical Role", "duration": "Immediate upon hire" }
+    ]
+  },
+  "Psychologist": {
+    "estimate": "6-10 Years",
+    "runway_demand": "Extreme",
+    "gatekeeper": "Obtaining state licensure after completing a doctoral degree and thousands of supervised clinical hours.",
+    "milestones": [
+      { "phase": "Undergraduate Degree", "duration": "4 years" },
+      { "phase": "Doctoral Program (Ph.D. or Psy.D.)", "duration": "4-6 years" },
+      { "phase": "Post-Doctoral Supervised Hours", "duration": "1-2 years" }
+    ]
+  },
+  "Professor": {
+    "estimate": "6-10 Years",
+    "runway_demand": "Extreme",
+    "gatekeeper": "Securing a highly competitive tenure-track or adjunct position after defending a Ph.D. dissertation.",
+    "milestones": [
+      { "phase": "Undergraduate & Master's", "duration": "4-6 years" },
+      { "phase": "Ph.D. Program & Teaching Assistant", "duration": "4-6 years" },
+      { "phase": "First Adjunct or Assistant Professor Role", "duration": "Variable" }
+    ]
+  },
+  "Journalist": {
+    "estimate": "1-4 Years",
+    "runway_demand": "Moderate",
+    "gatekeeper": "Building a strong clip portfolio and landing a staff writer or regular freelance gig.",
+    "milestones": [
+      { "phase": "Degree or Self-Taught Writing", "duration": "1-4 years" },
+      { "phase": "Unpaid Internships / Freelance Pitching", "duration": "6-12 months" },
+      { "phase": "First Paid Article or Staff Job", "duration": "1-3 months" }
+    ]
+  },
+  "Graphic Designer": {
+    "estimate": "6-12 Months",
+    "runway_demand": "Moderate",
+    "gatekeeper": "Assembling a professional portfolio that convinces clients or employers of your aesthetic and technical skill.",
+    "milestones": [
+      { "phase": "Learning Design Software & Theory", "duration": "3-6 months" },
+      { "phase": "Building a Portfolio", "duration": "2-4 months" },
+      { "phase": "Landing First Client or Junior Job", "duration": "1-3 months" }
+    ]
+  },
+  "Product Manager": {
+    "estimate": "2-5 Years",
+    "runway_demand": "High",
+    "gatekeeper": "Gaining adjacent industry experience (e.g. engineering, design) to transition into a PM role, as direct entry is rare.",
+    "milestones": [
+      { "phase": "Degree or Adjacent Role", "duration": "2-4 years" },
+      { "phase": "Transition / APM Program Application", "duration": "6-12 months" },
+      { "phase": "First PM Role", "duration": "Immediate upon hire" }
+    ]
+  },
+  "Marketing Manager": {
+    "estimate": "3-5 Years",
+    "runway_demand": "Moderate",
+    "gatekeeper": "Proving ROI on campaigns in junior roles before being promoted to management.",
+    "milestones": [
+      { "phase": "Degree or Digital Certifications", "duration": "6 months-4 years" },
+      { "phase": "Entry-Level Marketing Role", "duration": "2-4 years" },
+      { "phase": "Promotion to Manager", "duration": "Immediate upon promotion" }
+    ]
+  },
+  "Sales Manager": {
+    "estimate": "3-5 Years",
+    "runway_demand": "Low",
+    "gatekeeper": "Consistently hitting sales quotas as an individual contributor to prove leadership capability.",
+    "milestones": [
+      { "phase": "Entry-Level Sales (SDR/BDR)", "duration": "1-2 years" },
+      { "phase": "Account Executive", "duration": "2-3 years" },
+      { "phase": "Promotion to Manager", "duration": "Immediate upon promotion" }
+    ]
+  },
+  "Consultant": {
+    "estimate": "1-4 Years",
+    "runway_demand": "High",
+    "gatekeeper": "Passing rigorous case interviews at top consulting firms after obtaining a target-school degree.",
+    "milestones": [
+      { "phase": "Target Degree (Bachelors or MBA)", "duration": "2-4 years" },
+      { "phase": "Case Interview Prep & Recruitment", "duration": "3-6 months" },
+      { "phase": "First Associate/Consultant Role", "duration": "Immediate upon hire" }
+    ]
+  },
+  "Researcher": {
+    "estimate": "4-8 Years",
+    "runway_demand": "High",
+    "gatekeeper": "Securing a grant or institutional funding after obtaining an advanced degree.",
+    "milestones": [
+      { "phase": "Undergraduate Degree", "duration": "4 years" },
+      { "phase": "Graduate Studies & Lab Work", "duration": "2-5 years" },
+      { "phase": "First Paid Research Role/Grant", "duration": "Variable" }
+    ]
+  },
+  "Pharmacist": {
+    "estimate": "6-8 Years",
+    "runway_demand": "Extreme",
+    "gatekeeper": "Passing the NAPLEX and MPJE licensing exams after a grueling Pharm.D. program.",
+    "milestones": [
+      { "phase": "Pre-Pharmacy Undergrad", "duration": "2-4 years" },
+      { "phase": "Pharm.D. Program", "duration": "4 years" },
+      { "phase": "Licensing & First Job", "duration": "1-3 months" }
+    ]
+  },
+  "Dentist": {
+    "estimate": "8 Years",
+    "runway_demand": "Extreme",
+    "gatekeeper": "Passing national and state board exams after completing dental school and accruing massive student debt.",
+    "milestones": [
+      { "phase": "Undergraduate Degree", "duration": "4 years" },
+      { "phase": "Dental School", "duration": "4 years" },
+      { "phase": "Licensing & First Associate Role", "duration": "2-4 months" }
+    ]
+  },
+  "Veterinarian": {
+    "estimate": "8 Years",
+    "runway_demand": "Extreme",
+    "gatekeeper": "Passing the NAVLE licensing exam after completing an intensive DVM program.",
+    "milestones": [
+      { "phase": "Undergraduate Degree", "duration": "4 years" },
+      { "phase": "Veterinary School", "duration": "4 years" },
+      { "phase": "Licensing & First Practice Job", "duration": "2-4 months" }
+    ]
+  },
+  "Physiotherapist": {
+    "estimate": "6-7 Years",
+    "runway_demand": "Extreme",
+    "gatekeeper": "Passing the NPTE licensing exam after earning a Doctor of Physical Therapy (DPT) degree.",
+    "milestones": [
+      { "phase": "Undergraduate Degree", "duration": "4 years" },
+      { "phase": "DPT Program", "duration": "3 years" },
+      { "phase": "Licensing & First Clinic Role", "duration": "1-3 months" }
+    ]
+  },
+  "Content Creator": {
+    "estimate": "6-24 Months",
+    "runway_demand": "Unpredictable",
+    "gatekeeper": "Reaching platform monetization thresholds (e.g., 1000 YouTube subscribers) and securing the first sponsor.",
+    "milestones": [
+      { "phase": "Content Production & Audience Building", "duration": "6-18 months" },
+      { "phase": "Reaching Monetization Thresholds", "duration": "1-3 months" },
+      { "phase": "First Ad Revenue or Brand Deal", "duration": "Variable" }
+    ]
+  },
+  "Author": {
+    "estimate": "1-3 Years",
+    "runway_demand": "High",
+    "gatekeeper": "Securing a literary agent and publishing deal, or building enough audience for profitable self-publishing.",
+    "milestones": [
+      { "phase": "Writing the Manuscript", "duration": "6-18 months" },
+      { "phase": "Editing & Querying Agents", "duration": "6-12 months" },
+      { "phase": "First Advance or Royalty Check", "duration": "Variable" }
+    ]
+  },
+  "Photographer": {
+    "estimate": "6-12 Months",
+    "runway_demand": "Moderate",
+    "gatekeeper": "Building a strong portfolio and network to convince a client to pay for a shoot.",
+    "milestones": [
+      { "phase": "Learning & Gear Acquisition", "duration": "2-6 months" },
+      { "phase": "Unpaid Portfolio Building", "duration": "2-4 months" },
+      { "phase": "First Paid Shoot", "duration": "Immediate upon booking" }
+    ]
+  },
+  "Filmmaker": {
+    "estimate": "1-5 Years",
+    "runway_demand": "High",
+    "gatekeeper": "Securing funding for a project or landing a paid directing gig through festival recognition.",
+    "milestones": [
+      { "phase": "Learning & Short Films", "duration": "1-3 years" },
+      { "phase": "Festival Circuit & Networking", "duration": "6-12 months" },
+      { "phase": "First Paid Gig or Funding", "duration": "Variable" }
+    ]
+  },
+  "Actor": {
+    "estimate": "6-36 Months",
+    "runway_demand": "Unpredictable",
+    "gatekeeper": "Securing talent representation (an agent) and booking a paid role through continuous auditions.",
+    "milestones": [
+      { "phase": "Classes & Headshots", "duration": "3-6 months" },
+      { "phase": "Unpaid Roles & Auditioning", "duration": "1-2 years" },
+      { "phase": "First Paid Booking", "duration": "Variable" }
+    ]
+  },
+  "Musician": {
+    "estimate": "1-5 Years",
+    "runway_demand": "Unpredictable",
+    "gatekeeper": "Building a fan base large enough to generate streaming revenue or sell out local gigs.",
+    "milestones": [
+      { "phase": "Skill Development & Practice", "duration": "1-3 years" },
+      { "phase": "Recording & Gigging Locally", "duration": "6-24 months" },
+      { "phase": "First Meaningful Revenue", "duration": "Variable" }
+    ]
+  },
+  "Professional Athlete": {
+    "estimate": "10-15 Years",
+    "runway_demand": "Extreme",
+    "gatekeeper": "Being drafted or signed to a professional team after a lifetime of elite amateur competition.",
+    "milestones": [
+      { "phase": "Youth & High School Competition", "duration": "8-10 years" },
+      { "phase": "Collegiate/Amateur Elite Level", "duration": "2-4 years" },
+      { "phase": "First Pro Contract", "duration": "Variable" }
+    ]
+  },
+  "Chef": {
+    "estimate": "6-12 Months",
+    "runway_demand": "Low",
+    "gatekeeper": "Enduring the physical demands of a prep cook role before moving up the line.",
+    "milestones": [
+      { "phase": "Culinary School (Optional)", "duration": "6-24 months" },
+      { "phase": "Job Hunting", "duration": "1-2 months" },
+      { "phase": "First Line/Prep Cook Paycheck", "duration": "Immediate upon hire" }
+    ]
+  },
+  "News Anchor": {
+    "estimate": "3-6 Years",
+    "runway_demand": "High",
+    "gatekeeper": "Working through low-paying small-market reporting jobs to build an on-air reel for larger markets.",
+    "milestones": [
+      { "phase": "Journalism/Communications Degree", "duration": "4 years" },
+      { "phase": "Entry-Level Reporting (Small Market)", "duration": "1-3 years" },
+      { "phase": "First Anchor Promotion", "duration": "Variable" }
+    ]
+  },
+  "Air Traffic Controller": {
+    "estimate": "1-3 Years",
+    "runway_demand": "High",
+    "gatekeeper": "Passing the grueling FAA academy and highly stressful psychological screenings.",
+    "milestones": [
+      { "phase": "Application & Security Clearance", "duration": "6-12 months" },
+      { "phase": "FAA Academy Training", "duration": "2-5 months" },
+      { "phase": "First Facility Assignment", "duration": "Immediate upon graduation" }
+    ]
+  },
+  "Cybersecurity Specialist": {
+    "estimate": "6-18 Months",
+    "runway_demand": "Moderate",
+    "gatekeeper": "Obtaining foundational certifications (e.g., CompTIA Security+) and passing a technical interview.",
+    "milestones": [
+      { "phase": "Learning IT Fundamentals & Networking", "duration": "3-6 months" },
+      { "phase": "Security Certifications", "duration": "2-4 months" },
+      { "phase": "First Junior SOC Analyst Job", "duration": "1-3 months" }
+    ]
+  }
+}
