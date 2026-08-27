@@ -99,17 +99,7 @@ export default function ComparePage() {
     setSelectedCareers(selectedCareers.filter((c) => c.id !== id));
   };
 
-  useEffect(() => {
-    if (!searchQuery.trim() || isGenerating) return;
-    if (filteredCareers.length > 0) return;
-    if (selectedCareers.length >= 3) return;
-
-    const timer = setTimeout(() => {
-      handleGenerate(searchQuery);
-    }, 1200);
-
-    return () => clearTimeout(timer);
-  }, [searchQuery, filteredCareers.length, isGenerating, selectedCareers.length]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Auto-generation on timeout removed. Users will use the button.
 
   const handleGenerate = async (queryToGenerate: string) => {
     if (!queryToGenerate) return;
@@ -212,8 +202,25 @@ export default function ComparePage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               disabled={selectedCareers.length >= 3}
-              className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-neutral-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:border-transparent focus:ring-neutral-900 text-lg disabled:bg-neutral-100"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && filteredCareers.length === 0 && searchQuery.trim() !== '') {
+                  handleGenerate(searchQuery);
+                }
+              }}
+              className={`w-full pl-12 py-4 rounded-xl border-2 border-neutral-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:border-transparent focus:ring-neutral-900 text-lg disabled:bg-neutral-100 ${
+                searchQuery.trim() !== '' && filteredCareers.length === 0 && selectedCareers.length < 3 ? 'pr-[130px]' : 'pr-4'
+              }`}
             />
+            {searchQuery.trim() !== '' && filteredCareers.length === 0 && selectedCareers.length < 3 && (
+              <button
+                onClick={() => handleGenerate(searchQuery)}
+                disabled={isGenerating}
+                className="absolute right-3 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-neutral-900 text-white text-xs font-semibold rounded-lg hover:bg-neutral-800 transition-colors flex items-center gap-1.5 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isGenerating ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Sparkles className="w-3.5 h-3.5" />}
+                {isGenerating ? "Generating..." : "Generate AI"}
+              </button>
+            )}
           </div>
           
           {!searchQuery && selectedCareers.length < 3 && allCareers.length > 0 && (
@@ -263,7 +270,7 @@ export default function ComparePage() {
                       <Sparkles className="w-5 h-5 text-neutral-400 shrink-0 animate-pulse" />
                       <div className="flex flex-col text-left">
                         <span className="text-sm font-semibold text-neutral-700">Not found...</span>
-                        <span className="text-xs text-neutral-500">Wait a second to magically generate "{searchQuery}" using AI.</span>
+                        <span className="text-xs text-neutral-500">Press Enter or click "Generate AI" to create "{searchQuery}".</span>
                       </div>
                     </>
                   )}
