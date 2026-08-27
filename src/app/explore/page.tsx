@@ -119,16 +119,8 @@ export default function ExplorePage() {
     return list;
   }, [filteredCareers, sortBy]);
 
-  useEffect(() => {
-    if (!query.trim() || isGenerating) return;
-    if (filteredCareers.length > 0) return;
-
-    const timer = setTimeout(() => {
-      handleGenerate();
-    }, 1200);
-
-    return () => clearTimeout(timer);
-  }, [query, filteredCareers.length, isGenerating]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Auto-generation on timeout removed to prevent typos triggering AI early.
+  // The user will now click a button to generate the profile.
 
   const handleGenerate = async () => {
     if (!query) return;
@@ -185,6 +177,11 @@ export default function ExplorePage() {
             placeholder="Search any career in the world (e.g. Prompt Engineer, Surgeon, Filmmaker)..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && sortedCareers.length === 0 && query.trim() !== '') {
+                handleGenerate();
+              }
+            }}
             className="w-full pl-10 pr-4 py-3 rounded-xl border-2 border-neutral-300 focus:outline-none focus:ring-2 focus:border-transparent focus:ring-neutral-900 transition-shadow"
           />
         </div>
@@ -230,20 +227,27 @@ export default function ExplorePage() {
                 </>
               )}
             </div>
-            <div className="p-6 flex flex-col">
-              <div className="h-3 w-1/3 bg-neutral-200 rounded-full mb-4 animate-pulse"></div>
+            <div className="p-6 flex flex-col h-full">
               <h3 className="text-xl font-bold text-neutral-900 mb-2 flex items-center gap-2">
                 {isGenerating && <Loader2 className="w-5 h-5 text-neutral-900 animate-spin" />}
-                Analyzing "{query}"...
+                {isGenerating ? `Analyzing "${query}"...` : `No results for "${query}"`}
               </h3>
-              <div className="h-4 w-full bg-neutral-100 rounded-full mb-2 animate-pulse"></div>
-              <div className="h-4 w-5/6 bg-neutral-100 rounded-full mb-6 animate-pulse"></div>
-              <div className="flex items-center gap-2 mt-auto pt-4 border-t border-neutral-100">
-                <Loader2 className={`w-4 h-4 text-neutral-500 ${isGenerating ? 'animate-spin' : ''}`} />
-                <span className={`text-sm font-medium ${isGenerating ? 'text-neutral-900 font-bold' : 'text-neutral-400'}`}>
-                  {isGenerating ? "Building complete profile using AI..." : "Preparing to discover trade-offs..."}
-                </span>
-              </div>
+              <p className="text-neutral-600 mb-6 text-sm flex-grow">
+                 We couldn't find a career matching your search. Would you like our AI to generate a detailed trade-off profile for it?
+              </p>
+              
+              <button 
+                onClick={handleGenerate}
+                disabled={isGenerating}
+                className={`w-full py-3 px-4 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-colors ${
+                  isGenerating 
+                    ? "bg-neutral-100 text-neutral-400 cursor-not-allowed" 
+                    : "bg-neutral-900 text-white hover:bg-neutral-800"
+                }`}
+              >
+                {isGenerating ? "Building Profile..." : "Generate AI Profile"}
+                {!isGenerating && <Sparkles className="w-4 h-4" />}
+              </button>
             </div>
           </div>
         </div>
