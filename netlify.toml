@@ -1,0 +1,7 @@
+[build.environment]
+  # GMAIL_USER is only ever read server-side (src/app/api/feedback/route.ts) for
+  # sending mail via nodemailer; it never reaches client code. Netlify's secrets
+  # scanner still flags it because Turbopack's persistent build cache
+  # (.netlify/.next/cache/turbopack/**/*.sst) stores it internally. Omitting the
+  # key from scanning avoids a false-positive build failure.
+  SECRETS_SCAN_OMIT_KEYS = "GMAIL_USER"
